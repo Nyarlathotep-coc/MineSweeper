@@ -1,4 +1,4 @@
-﻿# MineSweeper
+# MineSweeper
 
 一个基于 Java Swing + MySQL 的扫雷小游戏，支持用户注册登录、游戏统计记录。
 
@@ -22,20 +22,20 @@
 
 ### 1. 配置数据库
 
-`sql
+```sql
 -- 创建数据库
 CREATE DATABASE minesweeper;
 USE minesweeper;
 
 -- 导入表结构
 SOURCE db/minesweeper.sql;
-`
+```
 
 或直接导入项目自带的 SQL 文件：
 
-`ash
+```bash
 mysql -u root -p minesweeper < db/minesweeper.sql
-`
+```
 
 默认预置了一个测试账户：**Player1 / 123**
 
@@ -43,11 +43,11 @@ mysql -u root -p minesweeper < db/minesweeper.sql
 
 编辑 src/util/DBUtil.java，根据你的 MySQL 配置修改：
 
-`java
+```java
 private static final String URL = "jdbc:mysql://localhost:3306/minesweeper";
 private static final String USER = "root";
 private static final String PASSWORD = "root";
-`
+```
 
 ### 3. 导入 Eclipse / MyEclipse
 
@@ -64,7 +64,7 @@ private static final String PASSWORD = "root";
 
 ## 项目结构
 
-`
+```
 MineSweeper/
 ├── db/
 │   └── minesweeper.sql          # 数据库建表脚本
@@ -97,7 +97,7 @@ MineSweeper/
 ├── .classpath
 ├── .project
 └── .gitignore
-`
+```
 
 ## 技术栈
 
@@ -123,3 +123,5 @@ MineSweeper/
 | user_id | INT (PK) | 用户 ID |
 | wins | INT | 胜场数 |
 | losses | INT | 负场数 |
+
+
