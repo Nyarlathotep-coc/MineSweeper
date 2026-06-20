@@ -1,0 +1,15 @@
+﻿# Eclipse build output
+bin/
+*.class
+
+# IDE
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
